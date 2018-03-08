@@ -1,0 +1,10 @@
+Docker:
+
+docker build -t my-gcc-app .
+sudo docker run -it --rm --name my-running-app2 my-gcc-app /bin/bash -c "export CPU_UTIL=0.3 && export CPU_TIME=400000000 && export IO_UTIL=0.5 &&  export MEMORY=1024 && export DISK_USAGE=1024 && ./myapp"
+valgrind --leak-check=yes ./a.out
+Use : valgrind --tool=massif ./a.out
+
+Testing:
+
+export CPU_UTIL=0.3 && export CPU_TIME=400000000 && export IO_UTIL=0.5 &&  export MEMORY=1024 && export DISK_USAGE=1024

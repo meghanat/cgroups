@@ -1,0 +1,14 @@
+Files:
+	loadgen_r7.c - application
+	cpu_mem_logger.c - testing code
+
+Output files:
+	cpulog 
+	massif.out.<pid>
+
+Instructions:
+	1) Declare environment variables as mentioned in 'commands.txt' under the 'Testing' section, note that the SUM OF CPU AND IO UTILIZATIONS DOES NOT EXCEED 1.0
+	2) Run command:
+		$sh cpu_mem_log.sh
+	 
+	3) After the execution is completed(or after killing the process), CPU and mem usage information of the program is dumped in the output files mentioned above.

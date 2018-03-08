@@ -1,0 +1,7 @@
+Files:
+	loadgen_r7.c - application
+	
+Instructions:
+	1) Declare environment variables as mentioned in 'commands.txt' under the 'Testing' section, note that the SUM OF CPU AND IO UTILIZATIONS DOES NOT EXCEED 1.0
+	2) Run command:
+		$./a.out
