@@ -75,12 +75,12 @@ int main(int argc,char *argv[])
 	// printf("%s\n",wf);
 	// printf("bp1\n");
 	// //system(wf);
-	f = fopen("input/starttime.txt", "r");
-	f1 = fopen("input/cpu_time.txt", "r");
-	f2 = fopen("input/core_request.txt","r");
-	f3 = fopen("input/sleep_time.txt","r");
-	f4 = fopen("input/job_id.txt","r");
-	f5 = fopen("input/task_id.txt","r");
+	f = fopen("input2.3/starttime.txt", "r");
+	f1 = fopen("input2.3/cpu_time.txt", "r");
+	//f2 = fopen("input/core_request.txt","r");
+	f3 = fopen("input2.3/sleep_time.txt","r");
+	f4 = fopen("input2.3/job_id.txt","r");
+	f5 = fopen("input/task_index.txt","r");
 	//f = fopen("s.txt", "r");
 	//f1 = fopen("c.txt", "r");
 	//f2 = fopen("u.txt","r");
