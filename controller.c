@@ -53,39 +53,25 @@ int main(int argc,char *argv[])
 	char *tcpu=NULL;
 	double tcput;
 	char *sleep_time = NULL;
-	//Code to get utilization
-	//util = getUtil();
-	//Code for getting start tiem
-	//start_time = getStartTime();
+	
 	int intr;
 	int  pid;
 	
-	/*sprintf(wf,"/cgroup/cpuset/job%s/tasks",argv[1]);
-	printf("%s",wf);	
-	cpuset_t = fopen(wf,"a");
-	int cpid = getpid();
-	fprintf(cpuset_t, "%d\n", cpid);
-	printf("%s\n",wf);
-	*/
+	
 	char cpu_grp[100];
-	sprintf(wf,"sudo cgclassify -g cpuset:job%s %d\n",argv[1],getpid());
+	// sprintf(wf,"sudo cgclassify -g cpuset:job%s %d\n",argv[1],getpid());
 	sprintf(cpu_grp,"sudo cgclassify -g cpu:group1 %d\n",getpid());
 	printf("%s\n",cpu_grp);
 	system(cpu_grp);
-	// printf("%s\n",wf);
-	// printf("bp1\n");
-	// //system(wf);
+	
 	f = fopen("input2.3/starttime.txt", "r");
 	f1 = fopen("input2.3/cpu_time.txt", "r");
-	//f2 = fopen("input/core_request.txt","r");
+	f2 = fopen("input2.3/core_request.txt","r");
 	f3 = fopen("input2.3/sleep_time.txt","r");
 	f4 = fopen("input2.3/job_id.txt","r");
-	f5 = fopen("input/task_index.txt","r");
-	//f = fopen("s.txt", "r");
-	//f1 = fopen("c.txt", "r");
-	//f2 = fopen("u.txt","r");
-	printf("bp10\n");	
-			
+	f5 = fopen("input2.3/task_index.txt","r");
+		
+	printf("files opened\n");	
 	
 	int count =0;
 	while(count<350)
@@ -96,17 +82,17 @@ int main(int argc,char *argv[])
 			getline(&tcpu,&lencpu,f1);
 			getline(&utilline,&lenutil,f2);
 			getline(&sleep_time,&lensleep,f3);
-	printf("bp12\n");	
+		
 			getline(&jobId,&lenjobId,f4);
-	printf("\nJobID %s",jobId);
+			printf("\nJobID %s",jobId);
 			getline(&taskId,&lenjobId,f5);
 			tcput = atof(tcpu);
 			util = atof(utilline);
 
 			intr = 0;
 			prev = start_time;
-			start_time = atoi(line)/10; 	
-			//printf("%d\n", start_time);
+			start_time = atoi(line); 	
+			
 			flag=1;
 		}
 		else
@@ -114,21 +100,21 @@ int main(int argc,char *argv[])
 			getline(&line,&len,f);
 			getline(&tcpu,&lencpu,f1);
 			getline(&utilline,&lenutil,f2);
-	printf("bp13\n");	
+	
 			getline(&sleep_time,&lensleep,f3);
-	printf("bp13\n");	
+	
 			getline(&jobId,&lenjobId,f4);
 			getline(&taskId,&lenjobId,f5);
 			tcput = atof(tcpu);
 			util = atof(utilline);
 
-			start_time = atoi(line)/10;
+			start_time = atoi(line);
 			intr = start_time - prev;
-			sleep(intr);
-			//printf("%d\n",start_time);
+			 sleep(intr);
+			
 		}
 		count++;
-		printf("bp11\n");	
+			
 
 		char core_request[100];
 		char cpu_time[100];
@@ -144,30 +130,11 @@ int main(int argc,char *argv[])
 		{
 						
 			printf("before exec\n");
-			//setuid(getuid());
-			/*setuid(u);	
-			printf("KKKK %d",getuid());
-			printf("lll");	*/		
+				
 			if(execl("./emulate_job",core_request,cpu_time,taskId,sleep_time,jobId,taskId,NULL)==-1)//change
 				perror("exec");
 			printf("exec failed\n");
 			exit(0);
-			/*
-			char command[50];
-
-   			strcpy(command, "sudo ./task1_log_deadline.out ");
-			strcat(command,core_request);
-			strcat(" ",cycles);
-			strcat(command," ");
-			strcat(command,taskid);
-   		
-							
-			system(command);//change*/
-		
-		//	printf("exec failed\n");
-		//	exit(0);
-	
-
 			
 		}
 		else
@@ -175,7 +142,6 @@ int main(int argc,char *argv[])
 			
 		}
 		prev = start_time;
-		//printf("%s",line);
 	}
 	fclose(f);
 	fclose(f1);

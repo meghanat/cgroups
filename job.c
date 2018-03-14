@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
 		int ret;
 		unsigned int flags = 0;
 		int P=100;
-		float RT = atof(argv[0]) * 1000;
+		float RT = atof(argv[0]);
 		printf("hhhhhhhhh : %f",RT);
 		//printf("deadline thread started [%ld]\n", gettid());
 
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
 		/* This creates a 10ms/30ms reservation *///nano
 		attr.sched_policy = SCHED_DEADLINE; 
 		//attr.sched_runtime = RT * 1000 * 1000;
-		attr.sched_runtime = RT * 301 * 1000 * 1.001;
+		attr.sched_runtime = RT * 301 * 1000 *1000* 1.001;
 		attr.sched_period = attr.sched_deadline = 301 * 1000 * 1000;
 
 		//ret = sched_setattr(getpid(), &attr, flags);
@@ -141,24 +141,10 @@ int main(int argc, char *argv[])
 			exit(-1);
 		}
 
-	/*	while (!done) {
-			x++;
-		}*/
 
-		//printf("deadline thread dies [%ld]\n", gettid());
-		//return NULL;
-	 
-
-		///////////////////////////////////////////////////
 	
 		printf("BEFORE:%d",getpid());	
 		printSchedType();
-	      	/*
-		 struct sched_param rt_param;
-		int rt_max_prio = sched_get_priority_max(SCHED_DEADLINE);
-		rt_param.sched_priority = rt_max_prio;
-		int rc=sched_setscheduler(getpid(),SCHED_DEADLINE, &rt_param);
-		*/
 	printf("AFTER:%d",getpid());	
 		printSchedType();
        
@@ -187,54 +173,27 @@ int main(int argc, char *argv[])
 
 	//float ts = slice*(1-utility)/utility;
 	int id = atoi(argv[2]);
-	//char io_file_name[20];
-	//sprintf(io_file_name,"io_speed%d.txt\n",id);
+
 	float ts;
 	int buff=10;
-	/*int io_speed_file = open("io_speed.txt",O_CREAT|O_RDWR|O_SYNC,0667);
-	char line[] ="aaaaaaaaaa";
-	double io_speed_start_tm= get_wall_time();
-	for(i=0;i<100;i++)
-	if(write(io_speed_file,&line,buff)==-1)
-		perror("write");
-	double io_speed_end_tm = get_wall_time();
-	if(remove("io_speed.txt")==-1)
-		perror("remove");
-
-	double io_time_per_byte= (io_speed_end_tm - io_speed_start_tm) / 5000000;
-
 	
-	//////////////////////////////////////////////////////////
-	*/
-	//system("cgset -r cpu.shares=1024 group1");
-	//sprintf(a,"sudo cgclassify -g cpu:group1 %d\n",getpid());
-	//printf("%s\n",a);
-	//system(a);
 	float num;
-	//FILE *f2;
-	//f2 = fopen("load.txt","w");
+	
 	int j=0,k=0;
 	ts = ts*1000000;
 
 	////////////////////////////////////////////////////////
 	double cpu_t = atof(argv[1]);
-	//printf("bp1\n");
-	//float cpuTime = (float)cpu_t/1000000;
+	
 	double cpuTime = cpu_t;
 	double slice_cput = cpuTime/((double)300/slice);
-	//float cpuTime = (float)cpu_t;
+	
 	printf("util : %f\t cputime : %f\n",utility,cpuTime);
-	// open output file 
-	//open(*id,O_CREAT|0666);
+	
 	float total=0;
 	t_start = get_wall_time();
 
 
-	/////////
-	/*double disk_usage = atof(argv[4]);
-	double total_sleep_time = disk_usage * io_time_per_byte;
-	double slice_sleep = total_sleep_time / (cpu_t/slice) ;
-	printf("total_sleep_time : %f\n",total_sleep_time);*/
 	double total_sleep_time = atof(argv[3]);
 	
 	double slice_sleep = total_sleep_time / ((double)300/slice);
@@ -252,10 +211,8 @@ int main(int argc, char *argv[])
 		num = 12/1822*4386384348/579849;
 		num = 12/1822*4386384348/579849;
 		num = 12/1822*4386384348/579849;
-	//	j++;
-	//	fprintf(f2,"task1 ping %d",j);
-	        
-	//end_wall = get_wall_time();
+	
+	
 	end = clock();
 	num = end-start;
 	num = num/CLOCKS_PER_SEC;
@@ -263,35 +220,21 @@ int main(int argc, char *argv[])
 		break;
 	}
 	total += num;
-	//end = clock();
+		
 	
-	//update total cpu time 
-	//total += end - start;
 	if(total>=cpuTime)
 		break;
 	usleep(slice_sleep);
 	end_wall = get_wall_time();
 	num = end-start;
 	num = num/CLOCKS_PER_SEC;
-	//if(num==0.1)
-	//	break;
+	
 	time_spent = end_wall - start_wall;
-	//fprintf(f2,"%f\n",(float)num/(time_spent));
-	//printf("Wall clock time : %f cpu Time : %f CPU Utilization : %f start : %d end : %d\n",(double)(time_spent),((float)(num)),(float)num/(time_spent),start,end);
-	//printf("Wall clock time : %f\tcpu Time : %f\tCPU Utilization : %f\n",(double)(time_spent),((float)(num)),(float)num/(time_spent));
+	
 	sprintf(util,"%f %f\n",(float)num/(time_spent),total);
-	//printf("%s",util);
-	//write(fd,util,9);
-	//sleep(1);
-	//}
-	/*printf("Done - task1 meau\n");
-	f = fopen("output1.txt","r");
-	time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-	//time_spent = (double)(end-begin);
-	fprintf(f,"Execution time t1: %f\nCurrent time t1: %f",time_spent,(double)clock());
-	fclose(f);*/
+	
 }
-	//fclose(f2);
+	
 	t_end = get_wall_time();
 	total_time_spent = t_end - t_start;
 	FILE *op = fopen("wl_resp.txt","a");
