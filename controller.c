@@ -60,16 +60,16 @@ int main(int argc,char *argv[])
 	
 	char cpu_grp[100];
 	// sprintf(wf,"sudo cgclassify -g cpuset:job%s %d\n",argv[1],getpid());
-	sprintf(cpu_grp,"sudo cgclassify -g cpu:group1 %d\n",getpid());
-	printf("%s\n",cpu_grp);
-	system(cpu_grp);
+	//sprintf(cpu_grp,"sudo cgclassify -g cpu:group1 %d\n",getpid());
+	//printf("%s\n",cpu_grp);
+	//system(cpu_grp);
 	
-	f = fopen("input2.3/starttime.txt", "r");
-	f1 = fopen("input2.3/cpu_time.txt", "r");
-	f2 = fopen("input2.3/core_request.txt","r");
-	f3 = fopen("input2.3/sleep_time.txt","r");
-	f4 = fopen("input2.3/job_id.txt","r");
-	f5 = fopen("input2.3/task_index.txt","r");
+	f = fopen("input3.4_4/starttime.txt", "r");
+	f1 = fopen("input3.4_4/cpu_time.txt", "r");
+	f2 = fopen("input3.4_4/core_request.txt","r");
+	f3 = fopen("input3.4_4/sleep_time.txt","r");
+	f4 = fopen("input3.4_4/job_id.txt","r");
+	f5 = fopen("input3.4_4/task_index.txt","r");
 		
 	printf("files opened\n");	
 	

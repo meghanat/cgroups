@@ -132,8 +132,8 @@ int main(int argc, char *argv[])
 		attr.sched_runtime = RT * 301 * 1000 *1000* 1.001;
 		attr.sched_period = attr.sched_deadline = 301 * 1000 * 1000;
 
-		//ret = sched_setattr(getpid(), &attr, flags);
-		ret =0;
+		ret = sched_setattr(getpid(), &attr, flags);
+		//ret =0;
 		printf("#############%d",ret);
 		if (ret < 0) {
 			done = 0;
