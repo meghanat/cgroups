@@ -134,10 +134,11 @@ int main(int argc, char *argv[])
 
 		ret = sched_setattr(getpid(), &attr, flags);
 		//ret =0;
-		printf("#############%d",ret);
+		printf("SCHED_DEADLINE RETURN: %d",ret);
 		if (ret < 0) {
 			done = 0;
 			perror("sched_setattr");
+			printf("Error!!");
 			exit(-1);
 		}
 
