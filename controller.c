@@ -60,16 +60,16 @@ int main(int argc,char *argv[])
 	
 	char cpu_grp[100];
 	// sprintf(wf,"sudo cgclassify -g cpuset:job%s %d\n",argv[1],getpid());
-	//sprintf(cpu_grp,"sudo cgclassify -g cpu:group1 %d\n",getpid());
+	// sprintf(cpu_grp,"sudo cgclassify -g cpu:group1 %d\n",getpid());
 	//printf("%s\n",cpu_grp);
-	//system(cpu_grp);
+	// system(cpu_grp);
 	
-	f = fopen("input2.4_4/starttime.txt", "r");
-	f1 = fopen("input2.4_4/cpu_time.txt", "r");
-	f2 = fopen("input2.4_4/core_request.txt","r");
-	f3 = fopen("input2.4_4/sleep_time.txt","r");
-	f4 = fopen("input2.4_4/job_id.txt","r");
-	f5 = fopen("input2.4_4/task_index.txt","r");
+	f = fopen("input1_4/starttime.txt", "r");
+	f1 = fopen("input1_4/cpu_time.txt", "r");
+	f2 = fopen("input1_4/core_request.txt","r");
+	f3 = fopen("input1_4/sleep_time.txt","r");
+	f4 = fopen("input1_4/job_id.txt","r");
+	f5 = fopen("input1_4/task_index.txt","r");
 		
 	printf("files opened\n");	
 	
@@ -122,16 +122,16 @@ int main(int argc,char *argv[])
 		sprintf(cpu_time,"%f",tcput);
 		sprintf(core_request,"%f",util);
 		sprintf(taskid,"%d",count);
-		printf("starttime :%s\t cycles : %s\t utilization : %s sleep_time : %s\n",line,cpu_time,core_request,sleep_time);
+		// printf("starttime :%s\t cycles : %s\t utilization : %s sleep_time : %s\n",line,cpu_time,core_request,sleep_time);
 		
 		pid = fork();
 		
 		if(pid==0)
 		{
 						
-			printf("before exec\n");
+			// printf("before exec\n");
 				
-			if(execl("./emulate_job",core_request,cpu_time,taskId,sleep_time,jobId,taskId,NULL)==-1)//change
+			if(execl("./emulate_job",core_request,cpu_time,taskId,sleep_time,jobId,taskId,line,NULL)==-1)//change
 				perror("exec");
 			printf("exec failed\n");
 			exit(0);

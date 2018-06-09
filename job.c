@@ -109,8 +109,8 @@ void printSchedType()
  
 int main(int argc, char *argv[])
 {
-	printf("BEFORE:%d",getpid());	
-		printSchedType();
+	// printf("BEFORE:%d",getpid());	
+		// printSchedType();
 	      	
 		/////////////////////////////////////////////////////
 		struct sched_attr attr;
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
 		unsigned int flags = 0;
 		int P=100;
 		float RT = atof(argv[0]);
-		printf("hhhhhhhhh : %f",RT);
+		// printf("hhhhhhhhh : %f",RT);
 		//printf("deadline thread started [%ld]\n", gettid());
 
 		attr.size = sizeof(attr);
@@ -129,28 +129,35 @@ int main(int argc, char *argv[])
 		/* This creates a 10ms/30ms reservation *///nano
 		attr.sched_policy = SCHED_DEADLINE; 
 		//attr.sched_runtime = RT * 1000 * 1000;
-		attr.sched_runtime = RT * 301 * 1000 *1000* 1.001;
-		attr.sched_period = attr.sched_deadline = 301 * 1000 * 1000;
+		float runtime=atof(argv[1]);
+		float period=runtime+atof(argv[3]);
+		attr.sched_runtime = runtime*1000*1000;
+		attr.sched_period = attr.sched_deadline = period*1.01*1000*1000;
+		int jobid=atoi(argv[4]);
+		// time_t t;
+  //   	time(&t
+		// (unsigned long)time(NULL)
+  		printf("\n Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
 
 		ret = sched_setattr(getpid(), &attr, flags);
-		//ret =0;
-		printf("SCHED_DEADLINE RETURN: %d",ret);
+		// ret =0;
+		// printf("SCHED_DEADLINE RETURN: %d",ret);
 		if (ret < 0) {
 			done = 0;
 			perror("sched_setattr");
-			printf("Error!!");
+			printf("Error!! Job ID: %d",atoi(argv[4]));
 			exit(-1);
 		}
 
 
 	
-		printf("BEFORE:%d",getpid());	
-		printSchedType();
-	printf("AFTER:%d",getpid());	
-		printSchedType();
+	// 	printf("BEFORE:%d",getpid());	
+	// 	printSchedType();
+	// printf("AFTER:%d",getpid());	
+	// 	printSchedType();
        
 	
-	printf("EXEC SUCCESSFULL!!!\n");
+	// printf("EXEC SUCCESSFULL!!!\n");
 	
 	
 	int i;
@@ -189,7 +196,7 @@ int main(int argc, char *argv[])
 	double cpuTime = cpu_t;
 	double slice_cput = cpuTime/((double)300/slice);
 	
-	printf("util : %f\t cputime : %f\n",utility,cpuTime);
+	//printf("util : %f\t cputime : %f\n",utility,cpuTime);
 	
 	float total=0;
 	t_start = get_wall_time();
@@ -198,11 +205,11 @@ int main(int argc, char *argv[])
 	double total_sleep_time = atof(argv[3]);
 	
 	double slice_sleep = total_sleep_time / ((double)300/slice);
-	printf("slice_sleep = %f\n",slice_sleep);
-	printf("utilization : %f\n",slice/(slice+slice_sleep));
+	//printf("slice_sleep = %f\n",slice_sleep);
+	//printf("utilization : %f\n",slice/(slice+slice_sleep));
 	slice_sleep *= 1000000;
 
-	printf("%s\n",argv[4] );
+	// printf("%s\n",argv[4] );
 	while(1)
 	{
 	start_wall = get_wall_time();
