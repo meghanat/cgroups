@@ -1,0 +1,358 @@
+Starting: Time:1528528175, Start Time: 0, Job Id: 1, Period: 100.000000, Runtime: 6.217778, Ratio: 0.062178
+
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 4, Period: 100.000000, Runtime: 0.761333, Ratio: 0.007613
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 2, Period: 100.000000, Runtime: 5.622222, Ratio: 0.056222
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 10, Period: 100.000000, Runtime: 41.177776, Ratio: 0.411778
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 5, Period: 100.000000, Runtime: 3.628889, Ratio: 0.036289
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 6, Period: 100.000000, Runtime: 0.565333, Ratio: 0.005653
+Starting: Time:1528528175, Start Time: 0, Job Id: 3, Period: 100.000000, Runtime: 0.718000, Ratio: 0.007180
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 12, Period: 100.000000, Runtime: 5.501600, Ratio: 0.055016
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 7, Period: 100.000000, Runtime: 0.009533, Ratio: 0.000095
+
+
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 15, Period: 100.000000, Runtime: 32.177776, Ratio: 0.321778
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 8, Period: 100.000000, Runtime: 48.222221, Ratio: 0.482222
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 11, Period: 100.000000, Runtime: 24.711111, Ratio: 0.247111
+
+Starting: Time:1528528175, Start Time: 0, Job Id: 14, Period: 100.000000, Runtime: 32.222221, Ratio: 0.322222
+Starting: Time:1528528175, Start Time: 0, Job Id: 13, Period: 100.000000, Runtime: 5.628889, Ratio: 0.056289
+Starting: Time:1528528175, Start Time: 0, Job Id: 9, Period: 100.000000, Runtime: 1.942889, Ratio: 0.019429
+
+Starting: Time:1528528253, Start Time: 78, Job Id: 16, Period: 100.000000, Runtime: 1.793244, Ratio: 0.017932
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 17, Period: 100.000000, Runtime: 6.226667, Ratio: 0.062267
+
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 18, Period: 100.000000, Runtime: 0.378889, Ratio: 0.003789
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 30, Period: 100.000000, Runtime: 33.422222, Ratio: 0.334222
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 19, Period: 100.000000, Runtime: 1.285111, Ratio: 0.012851
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 20, Period: 100.000000, Runtime: 4.042222, Ratio: 0.040422
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 25, Period: 100.000000, Runtime: 39.555557, Ratio: 0.395556
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 23, Period: 100.000000, Runtime: 42.688889, Ratio: 0.426889
+Starting: Time:1528528275, Start Time: 100, Job Id: 26, Period: 100.000000, Runtime: 26.777779, Ratio: 0.267778
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 22, Period: 100.000000, Runtime: 0.009533, Ratio: 0.000095
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 27, Period: 100.000000, Runtime: 1.563022, Ratio: 0.015630
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 21, Period: 100.000000, Runtime: 1.861556, Ratio: 0.018616
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 24, Period: 100.000000, Runtime: 1.049556, Ratio: 0.010496
+
+Starting: Time:1528528275, Start Time: 100, Job Id: 29, Period: 100.000000, Runtime: 33.755554, Ratio: 0.337556
+sched_setattr: Device or resource busy
+Error!! Job ID: 29
+Starting: Time:1528528275, Start Time: 100, Job Id: 28, Period: 100.000000, Runtime: 5.777778, Ratio: 0.057778
+
+ Ending: Time:1528528282, Start Time: 0,End Time: 1528528282.789005, Job Id: 8, Input Period: 100.000000, Input Runtime: 48.222221, Input Ratio: 0.482222, Actual Runtime: 48.226048, Actual Period: 107.292008, Actual Ratio: 0.449484
+
+ Ending: Time:1528528284, Start Time: 0,End Time: 1528528284.332051, Job Id: 10, Input Period: 100.000000, Input Runtime: 41.177776, Input Ratio: 0.411778, Actual Runtime: 41.183434, Actual Period: 108.836972, Actual Ratio: 0.378396
+
+ Ending: Time:1528528286, Start Time: 0,End Time: 1528528286.181004, Job Id: 15, Input Period: 100.000000, Input Runtime: 32.177776, Input Ratio: 0.321778, Actual Runtime: 32.180260, Actual Period: 110.684133, Actual Ratio: 0.290740
+
+ Ending: Time:1528528286, Start Time: 0,End Time: 1528528286.199186, Job Id: 14, Input Period: 100.000000, Input Runtime: 32.222221, Input Ratio: 0.322222, Actual Runtime: 32.226658, Actual Period: 110.697267, Actual Ratio: 0.291124
+
+ Ending: Time:1528528287, Start Time: 0,End Time: 1528528287.524128, Job Id: 11, Input Period: 100.000000, Input Runtime: 24.711111, Input Ratio: 0.247111, Actual Runtime: 24.711584, Actual Period: 112.026736, Actual Ratio: 0.220586
+
+ Ending: Time:1528528287, Start Time: 0,End Time: 1528528287.750796, Job Id: 12, Input Period: 100.000000, Input Runtime: 5.501600, Input Ratio: 0.055016, Actual Runtime: 5.501936, Actual Period: 112.254794, Actual Ratio: 0.049013
+
+ Ending: Time:1528528290, Start Time: 0,End Time: 1528528290.780263, Job Id: 1, Input Period: 100.000000, Input Runtime: 6.217778, Input Ratio: 0.062178, Actual Runtime: 6.218074, Actual Period: 115.286472, Actual Ratio: 0.053936
+
+ Ending: Time:1528528290, Start Time: 0,End Time: 1528528290.918549, Job Id: 13, Input Period: 100.000000, Input Runtime: 5.628889, Input Ratio: 0.056289, Actual Runtime: 5.629043, Actual Period: 115.416549, Actual Ratio: 0.048772
+
+ Ending: Time:1528528290, Start Time: 0,End Time: 1528528290.930546, Job Id: 2, Input Period: 100.000000, Input Runtime: 5.622222, Input Ratio: 0.056222, Actual Runtime: 5.622366, Actual Period: 115.436108, Actual Ratio: 0.048705
+
+ Ending: Time:1528528291, Start Time: 0,End Time: 1528528291.396737, Job Id: 5, Input Period: 100.000000, Input Runtime: 3.628889, Input Ratio: 0.036289, Actual Runtime: 3.629252, Actual Period: 115.901474, Actual Ratio: 0.031313
+
+ Ending: Time:1528528291, Start Time: 0,End Time: 1528528291.893664, Job Id: 9, Input Period: 100.000000, Input Runtime: 1.942889, Input Ratio: 0.019429, Actual Runtime: 1.942983, Actual Period: 116.391386, Actual Ratio: 0.016694
+
+ Ending: Time:1528528294, Start Time: 0,End Time: 1528528294.197988, Job Id: 4, Input Period: 100.000000, Input Runtime: 0.761333, Input Ratio: 0.007613, Actual Runtime: 0.761400, Actual Period: 118.703529, Actual Ratio: 0.006414
+
+ Ending: Time:1528528294, Start Time: 0,End Time: 1528528294.565512, Job Id: 3, Input Period: 100.000000, Input Runtime: 0.718000, Input Ratio: 0.007180, Actual Runtime: 0.718042, Actual Period: 119.070082, Actual Ratio: 0.006030
+
+ Ending: Time:1528528296, Start Time: 0,End Time: 1528528296.265838, Job Id: 6, Input Period: 100.000000, Input Runtime: 0.565333, Input Ratio: 0.005653, Actual Runtime: 0.565391, Actual Period: 120.770531, Actual Ratio: 0.004682
+
+Starting: Time:1528528303, Start Time: 128, Job Id: 31, Period: 100.000000, Runtime: 2.692133, Ratio: 0.026921
+
+Starting: Time:1528528343, Start Time: 168, Job Id: 32, Period: 100.000000, Runtime: 0.870667, Ratio: 0.008707
+
+Starting: Time:1528528353, Start Time: 178, Job Id: 33, Period: 100.000000, Runtime: 1.474370, Ratio: 0.014744
+
+ Ending: Time:1528528359, Start Time: 78,End Time: 1528528359.819849, Job Id: 16, Input Period: 100.000000, Input Runtime: 1.793244, Input Ratio: 0.017932, Actual Runtime: 1.793294, Actual Period: 106.322452, Actual Ratio: 0.016867
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 34, Period: 100.000000, Runtime: 5.024444, Ratio: 0.050244
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 36, Period: 100.000000, Runtime: 0.148889, Ratio: 0.001489
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 37, Period: 100.000000, Runtime: 0.295778, Ratio: 0.002958
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 35, Period: 100.000000, Runtime: 6.088889, Ratio: 0.060889
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 39, Period: 100.000000, Runtime: 0.526444, Ratio: 0.005264
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 38, Period: 100.000000, Runtime: 2.355556, Ratio: 0.023556
+
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 46, Period: 100.000000, Runtime: 6.822222, Ratio: 0.068222
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 42, Period: 100.000000, Runtime: 2.187111, Ratio: 0.021871
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 45, Period: 100.000000, Runtime: 1.658452, Ratio: 0.016585
+Starting: Time:1528528375, Start Time: 200, Job Id: 47, Period: 100.000000, Runtime: 37.266666, Ratio: 0.372667
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 44, Period: 100.000000, Runtime: 30.933332, Ratio: 0.309333
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 40, Period: 100.000000, Runtime: 0.009333, Ratio: 0.000093
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 41, Period: 100.000000, Runtime: 28.422222, Ratio: 0.284222
+
+
+Starting: Time:1528528375, Start Time: 200, Job Id: 48, Period: 100.000000, Runtime: 36.844444, Ratio: 0.368444
+Starting: Time:1528528375, Start Time: 200, Job Id: 43, Period: 100.000000, Runtime: 43.622223, Ratio: 0.436222
+
+ Ending: Time:1528528383, Start Time: 100,End Time: 1528528383.153126, Job Id: 27, Input Period: 100.000000, Input Runtime: 1.563022, Input Ratio: 0.015630, Actual Runtime: 1.563190, Actual Period: 107.640864, Actual Ratio: 0.014522
+
+ Ending: Time:1528528384, Start Time: 100,End Time: 1528528384.193553, Job Id: 23, Input Period: 100.000000, Input Runtime: 42.688889, Input Ratio: 0.426889, Actual Runtime: 42.695515, Actual Period: 108.693972, Actual Ratio: 0.392805
+
+ Ending: Time:1528528384, Start Time: 100,End Time: 1528528384.773747, Job Id: 25, Input Period: 100.000000, Input Runtime: 39.555557, Input Ratio: 0.395556, Actual Runtime: 39.558300, Actual Period: 109.274901, Actual Ratio: 0.362007
+
+ Ending: Time:1528528385, Start Time: 100,End Time: 1528528385.894101, Job Id: 30, Input Period: 100.000000, Input Runtime: 33.422222, Input Ratio: 0.334222, Actual Runtime: 33.427277, Actual Period: 110.396301, Actual Ratio: 0.302793
+
+ Ending: Time:1528528387, Start Time: 100,End Time: 1528528387.107816, Job Id: 26, Input Period: 100.000000, Input Runtime: 26.777779, Input Ratio: 0.267778, Actual Runtime: 26.779186, Actual Period: 111.603695, Actual Ratio: 0.239949
+
+ Ending: Time:1528528390, Start Time: 100,End Time: 1528528390.831607, Job Id: 17, Input Period: 100.000000, Input Runtime: 6.226667, Input Ratio: 0.062267, Actual Runtime: 6.227427, Actual Period: 115.335258, Actual Ratio: 0.053994
+
+ Ending: Time:1528528391, Start Time: 100,End Time: 1528528391.015114, Job Id: 28, Input Period: 100.000000, Input Runtime: 5.777778, Input Ratio: 0.057778, Actual Runtime: 5.778540, Actual Period: 115.494719, Actual Ratio: 0.050033
+
+ Ending: Time:1528528391, Start Time: 100,End Time: 1528528391.289118, Job Id: 20, Input Period: 100.000000, Input Runtime: 4.042222, Input Ratio: 0.040422, Actual Runtime: 4.042248, Actual Period: 115.790607, Actual Ratio: 0.034910
+
+ Ending: Time:1528528391, Start Time: 100,End Time: 1528528391.723436, Job Id: 21, Input Period: 100.000000, Input Runtime: 1.861556, Input Ratio: 0.018616, Actual Runtime: 1.861621, Actual Period: 116.209193, Actual Ratio: 0.016020
+
+ Ending: Time:1528528392, Start Time: 100,End Time: 1528528392.550184, Job Id: 19, Input Period: 100.000000, Input Runtime: 1.285111, Input Ratio: 0.012851, Actual Runtime: 1.285209, Actual Period: 117.052341, Actual Ratio: 0.010980
+
+ Ending: Time:1528528393, Start Time: 100,End Time: 1528528393.796683, Job Id: 24, Input Period: 100.000000, Input Runtime: 1.049556, Input Ratio: 0.010496, Actual Runtime: 1.049636, Actual Period: 118.282384, Actual Ratio: 0.008874
+
+Starting: Time:1528528399, Start Time: 224, Job Id: 49, Period: 100.000000, Runtime: 4.820504, Ratio: 0.048205
+
+ Ending: Time:1528528409, Start Time: 128,End Time: 1528528409.997697, Job Id: 31, Input Period: 100.000000, Input Runtime: 2.692133, Input Ratio: 0.026921, Actual Runtime: 2.692238, Actual Period: 106.497239, Actual Ratio: 0.025280
+
+ Ending: Time:1528528410, Start Time: 100,End Time: 1528528410.281667, Job Id: 18, Input Period: 100.000000, Input Runtime: 0.378889, Input Ratio: 0.003789, Actual Runtime: 0.378932, Actual Period: 134.784217, Actual Ratio: 0.002811
+
+ Ending: Time:1528528453, Start Time: 168,End Time: 1528528453.566233, Job Id: 32, Input Period: 100.000000, Input Runtime: 0.870667, Input Ratio: 0.008707, Actual Runtime: 0.870670, Actual Period: 110.066983, Actual Ratio: 0.007910
+
+Starting: Time:1528528458, Start Time: 283, Job Id: 50, Period: 100.000000, Runtime: 1.360385, Ratio: 0.013604
+
+ Ending: Time:1528528460, Start Time: 178,End Time: 1528528460.108160, Job Id: 33, Input Period: 100.000000, Input Runtime: 1.474370, Input Ratio: 0.014744, Actual Runtime: 1.474419, Actual Period: 106.606195, Actual Ratio: 0.013831
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 53, Period: 100.000000, Runtime: 4.211111, Ratio: 0.042111
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 51, Period: 100.000000, Runtime: 5.060000, Ratio: 0.050600
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 56, Period: 100.000000, Runtime: 2.082000, Ratio: 0.020820
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 57, Period: 100.000000, Runtime: 3.373333, Ratio: 0.033733
+
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 54, Period: 100.000000, Runtime: 1.436000, Ratio: 0.014360
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 52, Period: 100.000000, Runtime: 5.628889, Ratio: 0.056289
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 61, Period: 100.000000, Runtime: 45.733334, Ratio: 0.457333
+
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 55, Period: 100.000000, Runtime: 0.833333, Ratio: 0.008333
+
+
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 62, Period: 100.000000, Runtime: 27.533333, Ratio: 0.275333
+Starting: Time:1528528475, Start Time: 300, Job Id: 64, Period: 100.000000, Runtime: 6.088889, Ratio: 0.060889
+Starting: Time:1528528475, Start Time: 300, Job Id: 66, Period: 100.000000, Runtime: 34.777779, Ratio: 0.347778
+Starting: Time:1528528475, Start Time: 300, Job Id: 65, Period: 100.000000, Runtime: 34.933334, Ratio: 0.349333
+sched_setattr: Device or resource busy
+Error!! Job ID: 65Starting: Time:1528528475, Start Time: 300, Job Id: 63, Period: 100.000000, Runtime: 2.155852, Ratio: 0.021559
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 59, Period: 100.000000, Runtime: 34.288891, Ratio: 0.342889
+sched_setattr: Device or resource busy
+Error!! Job ID: 59
+Starting: Time:1528528475, Start Time: 300, Job Id: 58, Period: 100.000000, Runtime: 0.009756, Ratio: 0.000098
+
+Starting: Time:1528528475, Start Time: 300, Job Id: 60, Period: 100.000000, Runtime: 1.305556, Ratio: 0.013056
+
+ Ending: Time:1528528481, Start Time: 200,End Time: 1528528481.121920, Job Id: 45, Input Period: 100.000000, Input Runtime: 1.658452, Input Ratio: 0.016585, Actual Runtime: 1.658507, Actual Period: 105.617446, Actual Ratio: 0.015703
+
+ Ending: Time:1528528483, Start Time: 200,End Time: 1528528483.320472, Job Id: 43, Input Period: 100.000000, Input Runtime: 43.622223, Input Ratio: 0.436222, Actual Runtime: 43.625164, Actual Period: 107.808060, Actual Ratio: 0.404656
+
+ Ending: Time:1528528484, Start Time: 200,End Time: 1528528484.901383, Job Id: 48, Input Period: 100.000000, Input Runtime: 36.844444, Input Ratio: 0.368444, Actual Runtime: 36.848103, Actual Period: 109.390097, Actual Ratio: 0.336850
+
+ Ending: Time:1528528484, Start Time: 200,End Time: 1528528484.954295, Job Id: 47, Input Period: 100.000000, Input Runtime: 37.266666, Input Ratio: 0.372667, Actual Runtime: 37.271778, Actual Period: 109.449427, Actual Ratio: 0.340539
+
+ Ending: Time:1528528486, Start Time: 200,End Time: 1528528486.127074, Job Id: 44, Input Period: 100.000000, Input Runtime: 30.933332, Input Ratio: 0.309333, Actual Runtime: 30.934412, Actual Period: 110.622006, Actual Ratio: 0.279641
+
+ Ending: Time:1528528486, Start Time: 200,End Time: 1528528486.584367, Job Id: 41, Input Period: 100.000000, Input Runtime: 28.422222, Input Ratio: 0.284222, Actual Runtime: 28.422688, Actual Period: 111.077270, Actual Ratio: 0.255882
+
+ Ending: Time:1528528490, Start Time: 200,End Time: 1528528490.530396, Job Id: 46, Input Period: 100.000000, Input Runtime: 6.822222, Input Ratio: 0.068222, Actual Runtime: 6.822958, Actual Period: 115.026246, Actual Ratio: 0.059317
+
+ Ending: Time:1528528490, Start Time: 200,End Time: 1528528490.812284, Job Id: 35, Input Period: 100.000000, Input Runtime: 6.088889, Input Ratio: 0.060889, Actual Runtime: 6.089513, Actual Period: 115.309540, Actual Ratio: 0.052810
+
+ Ending: Time:1528528490, Start Time: 200,End Time: 1528528490.982968, Job Id: 34, Input Period: 100.000000, Input Runtime: 5.024444, Input Ratio: 0.050244, Actual Runtime: 5.024793, Actual Period: 115.483065, Actual Ratio: 0.043511
+
+ Ending: Time:1528528491, Start Time: 200,End Time: 1528528491.624661, Job Id: 38, Input Period: 100.000000, Input Runtime: 2.355556, Input Ratio: 0.023556, Actual Runtime: 2.355861, Actual Period: 116.121338, Actual Ratio: 0.020288
+
+ Ending: Time:1528528491, Start Time: 200,End Time: 1528528491.664457, Job Id: 42, Input Period: 100.000000, Input Runtime: 2.187111, Input Ratio: 0.021871, Actual Runtime: 2.187439, Actual Period: 116.160282, Actual Ratio: 0.018831
+
+ Ending: Time:1528528496, Start Time: 200,End Time: 1528528496.770239, Job Id: 39, Input Period: 100.000000, Input Runtime: 0.526444, Input Ratio: 0.005264, Actual Runtime: 0.526513, Actual Period: 121.267235, Actual Ratio: 0.004342
+
+Starting: Time:1528528503, Start Time: 328, Job Id: 67, Period: 100.000000, Runtime: 3.412822, Ratio: 0.034128
+
+ Ending: Time:1528528508, Start Time: 224,End Time: 1528528508.696427, Job Id: 49, Input Period: 100.000000, Input Runtime: 4.820504, Input Ratio: 0.048205, Actual Runtime: 4.820743, Actual Period: 109.189107, Actual Ratio: 0.044150
+
+ Ending: Time:1528528514, Start Time: 200,End Time: 1528528514.814444, Job Id: 37, Input Period: 100.000000, Input Runtime: 0.295778, Input Ratio: 0.002958, Actual Runtime: 0.295792, Actual Period: 139.312177, Actual Ratio: 0.002123
+
+ Ending: Time:1528528547, Start Time: 200,End Time: 1528528547.408833, Job Id: 36, Input Period: 100.000000, Input Runtime: 0.148889, Input Ratio: 0.001489, Actual Runtime: 0.148894, Actual Period: 171.906990, Actual Ratio: 0.000866
+
+Starting: Time:1528528549, Start Time: 374, Job Id: 68, Period: 100.000000, Runtime: 2.450933, Ratio: 0.024509
+
+ Ending: Time:1528528563, Start Time: 0,End Time: 1528528563.101930, Job Id: 7, Input Period: 100.000000, Input Runtime: 0.009533, Input Ratio: 0.000095, Actual Runtime: 0.009545, Actual Period: 387.605631, Actual Ratio: 0.000025
+
+ Ending: Time:1528528567, Start Time: 283,End Time: 1528528567.208502, Job Id: 50, Input Period: 100.000000, Input Runtime: 1.360385, Input Ratio: 0.013604, Actual Runtime: 1.360471, Actual Period: 108.701815, Actual Ratio: 0.012516
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 69, Period: 100.000000, Runtime: 5.668889, Ratio: 0.056689
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 71, Period: 100.000000, Runtime: 2.335556, Ratio: 0.023356
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 70, Period: 100.000000, Runtime: 0.974889, Ratio: 0.009749
+
+
+
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 72, Period: 100.000000, Runtime: 2.320000, Ratio: 0.023200
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 80, Period: 100.000000, Runtime: 7.026667, Ratio: 0.070267
+Starting: Time:1528528575, Start Time: 400, Job Id: 73, Period: 100.000000, Runtime: 4.835556, Ratio: 0.048356
+Starting: Time:1528528575, Start Time: 400, Job Id: 79, Period: 100.000000, Runtime: 1.283437, Ratio: 0.012834
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 78, Period: 100.000000, Runtime: 30.444445, Ratio: 0.304444
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 81, Period: 100.000000, Runtime: 38.688889, Ratio: 0.386889
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 82, Period: 100.000000, Runtime: 38.733334, Ratio: 0.387333
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 77, Period: 100.000000, Runtime: 37.755554, Ratio: 0.377556
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 74, Period: 100.000000, Runtime: 0.009956, Ratio: 0.000100
+Starting: Time:1528528575, Start Time: 400, Job Id: 75, Period: 100.000000, Runtime: 24.044443, Ratio: 0.240444
+
+Starting: Time:1528528575, Start Time: 400, Job Id: 76, Period: 100.000000, Runtime: 1.100222, Ratio: 0.011002
+
+ Ending: Time:1528528581, Start Time: 300,End Time: 1528528581.873924, Job Id: 63, Input Period: 100.000000, Input Runtime: 2.155852, Input Ratio: 0.021559, Actual Runtime: 2.156091, Actual Period: 106.354448, Actual Ratio: 0.020273
+
+ Ending: Time:1528528583, Start Time: 300,End Time: 1528528583.358975, Job Id: 61, Input Period: 100.000000, Input Runtime: 45.733334, Input Ratio: 0.457333, Actual Runtime: 45.737293, Actual Period: 107.849014, Actual Ratio: 0.424086
+
+ Ending: Time:1528528585, Start Time: 300,End Time: 1528528585.569800, Job Id: 66, Input Period: 100.000000, Input Runtime: 34.777779, Input Ratio: 0.347778, Actual Runtime: 34.781715, Actual Period: 110.057057, Actual Ratio: 0.316033
+
+ Ending: Time:1528528586, Start Time: 300,End Time: 1528528586.984982, Job Id: 62, Input Period: 100.000000, Input Runtime: 27.533333, Input Ratio: 0.275333, Actual Runtime: 27.534630, Actual Period: 111.473537, Actual Ratio: 0.247006
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.003647, Job Id: 64, Input Period: 100.000000, Input Runtime: 6.088889, Input Ratio: 0.060889, Actual Runtime: 6.089530, Actual Period: 115.485347, Actual Ratio: 0.052730
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.070553, Job Id: 52, Input Period: 100.000000, Input Runtime: 5.628889, Input Ratio: 0.056289, Actual Runtime: 5.629187, Actual Period: 115.560761, Actual Ratio: 0.048712
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.083023, Job Id: 51, Input Period: 100.000000, Input Runtime: 5.060000, Input Ratio: 0.050600, Actual Runtime: 5.060204, Actual Period: 115.577422, Actual Ratio: 0.043782
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.362223, Job Id: 53, Input Period: 100.000000, Input Runtime: 4.211111, Input Ratio: 0.042111, Actual Runtime: 4.211380, Actual Period: 115.857747, Actual Ratio: 0.036350
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.400683, Job Id: 57, Input Period: 100.000000, Input Runtime: 3.373333, Input Ratio: 0.033733, Actual Runtime: 3.373716, Actual Period: 115.893118, Actual Ratio: 0.029111
+
+ Ending: Time:1528528591, Start Time: 300,End Time: 1528528591.662191, Job Id: 56, Input Period: 100.000000, Input Runtime: 2.082000, Input Ratio: 0.020820, Actual Runtime: 2.082299, Actual Period: 116.155365, Actual Ratio: 0.017927
+
+ Ending: Time:1528528592, Start Time: 300,End Time: 1528528592.788749, Job Id: 54, Input Period: 100.000000, Input Runtime: 1.436000, Input Ratio: 0.014360, Actual Runtime: 1.436001, Actual Period: 117.279334, Actual Ratio: 0.012244
+
+ Ending: Time:1528528593, Start Time: 300,End Time: 1528528593.423119, Job Id: 60, Input Period: 100.000000, Input Runtime: 1.305556, Input Ratio: 0.013056, Actual Runtime: 1.305658, Actual Period: 117.896779, Actual Ratio: 0.011075
+
+Starting: Time:1528528593, Start Time: 418, Job Id: 83, Period: 100.000000, Runtime: 6.971170, Ratio: 0.069712
+
+ Ending: Time:1528528596, Start Time: 300,End Time: 1528528596.280893, Job Id: 55, Input Period: 100.000000, Input Runtime: 0.833333, Input Ratio: 0.008333, Actual Runtime: 0.833395, Actual Period: 120.770026, Actual Ratio: 0.006901
+
+ Ending: Time:1528528610, Start Time: 328,End Time: 1528528610.655643, Job Id: 67, Input Period: 100.000000, Input Runtime: 3.412822, Input Ratio: 0.034128, Actual Runtime: 3.412850, Actual Period: 107.147517, Actual Ratio: 0.031852
+
+ Ending: Time:1528528654, Start Time: 374,End Time: 1528528654.302502, Job Id: 68, Input Period: 100.000000, Input Runtime: 2.450933, Input Ratio: 0.024509, Actual Runtime: 2.450982, Actual Period: 104.790705, Actual Ratio: 0.023389
+
+ Ending: Time:1528528658, Start Time: 100,End Time: 1528528658.917301, Job Id: 22, Input Period: 100.000000, Input Runtime: 0.009533, Input Ratio: 0.000095, Actual Runtime: 0.009535, Actual Period: 383.405558, Actual Ratio: 0.000025
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 84, Period: 100.000000, Runtime: 5.853333, Ratio: 0.058533
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 88, Period: 100.000000, Runtime: 3.648889, Ratio: 0.036489
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 98, Period: 100.000000, Runtime: 34.444443, Ratio: 0.344444
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 94, Period: 100.000000, Runtime: 36.577778, Ratio: 0.365778
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 92, Period: 100.000000, Runtime: 42.111111, Ratio: 0.421111
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 86, Period: 100.000000, Runtime: 4.924444, Ratio: 0.049244
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 85, Period: 100.000000, Runtime: 5.582222, Ratio: 0.055822
+
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 93, Period: 100.000000, Runtime: 0.976667, Ratio: 0.009767
+Starting: Time:1528528675, Start Time: 500, Job Id: 99, Period: 100.000000, Runtime: 34.066666, Ratio: 0.340667
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 90, Period: 100.000000, Runtime: 5.317778, Ratio: 0.053178
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 91, Period: 100.000000, Runtime: 0.009533, Ratio: 0.000095
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 96, Period: 100.000000, Runtime: 7.731111, Ratio: 0.077311
+sched_setattr: Device or resource busy
+Error!! Job ID: 96
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 97, Period: 100.000000, Runtime: 5.751111, Ratio: 0.057511
+Starting: Time:1528528675, Start Time: 500, Job Id: 89, Period: 100.000000, Runtime: 2.244444, Ratio: 0.022444
+sched_setattr: Device or resource busy
+Error!! Job ID: 97
+Starting: Time:1528528675, Start Time: 500, Job Id: 87, Period: 100.000000, Runtime: 0.254667, Ratio: 0.002547
+
+Starting: Time:1528528675, Start Time: 500, Job Id: 95, Period: 100.000000, Runtime: 25.888889, Ratio: 0.258889
+sched_setattr: Device or resource busy
+Error!! Job ID: 95
+ Ending: Time:1528528682, Start Time: 400,End Time: 1528528682.577769, Job Id: 79, Input Period: 100.000000, Input Runtime: 1.283437, Input Ratio: 0.012834, Actual Runtime: 1.283643, Actual Period: 107.065321, Actual Ratio: 0.011989
+
+ Ending: Time:1528528684, Start Time: 400,End Time: 1528528684.728764, Job Id: 82, Input Period: 100.000000, Input Runtime: 38.733334, Input Ratio: 0.387333, Actual Runtime: 38.735901, Actual Period: 109.215109, Actual Ratio: 0.354675
+
+ Ending: Time:1528528684, Start Time: 400,End Time: 1528528684.779205, Job Id: 81, Input Period: 100.000000, Input Runtime: 38.688889, Input Ratio: 0.386889, Actual Runtime: 38.695099, Actual Period: 109.266127, Actual Ratio: 0.354136
+
+ Ending: Time:1528528684, Start Time: 400,End Time: 1528528684.951832, Job Id: 77, Input Period: 100.000000, Input Runtime: 37.755554, Input Ratio: 0.377556, Actual Runtime: 37.757950, Actual Period: 109.437932, Actual Ratio: 0.345017
+
+ Ending: Time:1528528686, Start Time: 400,End Time: 1528528686.204596, Job Id: 78, Input Period: 100.000000, Input Runtime: 30.444445, Input Ratio: 0.304444, Actual Runtime: 30.447065, Actual Period: 110.691627, Actual Ratio: 0.275062
+
+ Ending: Time:1528528687, Start Time: 400,End Time: 1528528687.461351, Job Id: 75, Input Period: 100.000000, Input Runtime: 24.044443, Input Ratio: 0.240444, Actual Runtime: 24.047266, Actual Period: 111.941686, Actual Ratio: 0.214820
+
+ Ending: Time:1528528690, Start Time: 400,End Time: 1528528690.473990, Job Id: 80, Input Period: 100.000000, Input Runtime: 7.026667, Input Ratio: 0.070267, Actual Runtime: 7.027784, Actual Period: 114.961511, Actual Ratio: 0.061132
+
+ Ending: Time:1528528690, Start Time: 400,End Time: 1528528690.904345, Job Id: 69, Input Period: 100.000000, Input Runtime: 5.668889, Input Ratio: 0.056689, Actual Runtime: 5.669585, Actual Period: 115.395962, Actual Ratio: 0.049132
+
+ Ending: Time:1528528691, Start Time: 400,End Time: 1528528691.085703, Job Id: 73, Input Period: 100.000000, Input Runtime: 4.835556, Input Ratio: 0.048356, Actual Runtime: 4.836349, Actual Period: 115.573261, Actual Ratio: 0.041847
+
+ Ending: Time:1528528691, Start Time: 400,End Time: 1528528691.576162, Job Id: 71, Input Period: 100.000000, Input Runtime: 2.335556, Input Ratio: 0.023356, Actual Runtime: 2.335664, Actual Period: 116.066305, Actual Ratio: 0.020124
+
+ Ending: Time:1528528691, Start Time: 400,End Time: 1528528691.654667, Job Id: 72, Input Period: 100.000000, Input Runtime: 2.320000, Input Ratio: 0.023200, Actual Runtime: 2.320154, Actual Period: 116.142685, Actual Ratio: 0.019977
+
+ Ending: Time:1528528692, Start Time: 400,End Time: 1528528692.120396, Job Id: 76, Input Period: 100.000000, Input Runtime: 1.100222, Input Ratio: 0.011002, Actual Runtime: 1.100391, Actual Period: 116.600207, Actual Ratio: 0.009437
+
+ Ending: Time:1528528692, Start Time: 400,End Time: 1528528692.820739, Job Id: 70, Input Period: 100.000000, Input Runtime: 0.974889, Input Ratio: 0.009749, Actual Runtime: 0.974942, Actual Period: 117.310431, Actual Ratio: 0.008311
+
+ Ending: Time:1528528706, Start Time: 418,End Time: 1528528706.031694, Job Id: 83, Input Period: 100.000000, Input Runtime: 6.971170, Input Ratio: 0.069712, Actual Runtime: 6.971287, Actual Period: 112.521732, Actual Ratio: 0.061955
+

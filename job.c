@@ -130,14 +130,14 @@ int main(int argc, char *argv[])
 		attr.sched_policy = SCHED_DEADLINE; 
 		//attr.sched_runtime = RT * 1000 * 1000;
 		float runtime=atof(argv[1]);
-		float period=runtime+atof(argv[3]);
+		float period=atof(argv[7]);
 		attr.sched_runtime = runtime*1000*1000;
-		attr.sched_period = attr.sched_deadline = period*1.01*1000*1000;
+		attr.sched_period = attr.sched_deadline = period*1000*1000;
 		int jobid=atoi(argv[4]);
 		// time_t t;
   //   	time(&t
 		// (unsigned long)time(NULL)
-  		printf("\n Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
+  		printf("\nStarting: Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
 
 		ret = sched_setattr(getpid(), &attr, flags);
 		// ret =0;
@@ -219,7 +219,7 @@ int main(int argc, char *argv[])
 		num = 12/1822*4386384348/579849;
 		num = 12/1822*4386384348/579849;
 		num = 12/1822*4386384348/579849;
-	
+			
 	
 	end = clock();
 	num = end-start;
@@ -242,9 +242,13 @@ int main(int argc, char *argv[])
 	sprintf(util,"%f %f\n",(float)num/(time_spent),total);
 	
 }
-	
+//	printf("\nJob Id:%d, cpu time: %f, actual util:%s, input util:%f \n",jobid,cpuTime,util,runtime/period);
+//	printf("\n Time:%lu, Start Time: %d, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ration: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
+//	system("ps -eo stat,pid,user,command | egrep \"^STAT|^D|^R\"");
+//	printf("\n\n=====================================\n\n");
 	t_end = get_wall_time();
 	total_time_spent = t_end - t_start;
+	printf("\n Ending: Time:%lu, Start Time: %d,End Time: %f, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ratio: %f\n",(unsigned long)time(NULL), atoi(argv[6]),t_end,jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
 	FILE *op = fopen("wl_resp.txt","a");
 	fprintf(op,"%s, %d, %f\n",argv[4],id,total_time_spent);
 	fclose(op);

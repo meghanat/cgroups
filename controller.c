@@ -29,12 +29,13 @@ int main(int argc,char *argv[])
 	FILE *f3;
 	FILE *f4;
 	FILE *f5;
-
+	FILE *f6;
 	char wf[100];
 	char *line = NULL;
 	char *utilline = NULL;
 	char *jobId = NULL;
 	char *taskId = NULL;
+	char *exec_time=NULL;
 
 	size_t len = 0;
 	size_t lencpu = 0;
@@ -42,6 +43,7 @@ int main(int argc,char *argv[])
 	size_t lensleep = 0;
 	size_t lenjobId = 0;
 	size_t lentaskId = 0;
+	size_t lenexec=0;
 
 	ssize_t read;
 
@@ -71,6 +73,7 @@ int main(int argc,char *argv[])
 	f4 = fopen("input1_4/job_id.txt","r");
 	f5 = fopen("input1_4/task_index.txt","r");
 		
+	f6 = fopen("input1_4/exec_time.txt","r");
 	printf("files opened\n");	
 	
 	int count =0;
@@ -82,9 +85,9 @@ int main(int argc,char *argv[])
 			getline(&tcpu,&lencpu,f1);
 			getline(&utilline,&lenutil,f2);
 			getline(&sleep_time,&lensleep,f3);
-		
+			getline(&exec_time,&lenexec,f6);		
 			getline(&jobId,&lenjobId,f4);
-			printf("\nJobID %s",jobId);
+//			printf("\nJobID %s",jobId);
 			getline(&taskId,&lenjobId,f5);
 			tcput = atof(tcpu);
 			util = atof(utilline);
@@ -122,7 +125,7 @@ int main(int argc,char *argv[])
 		sprintf(cpu_time,"%f",tcput);
 		sprintf(core_request,"%f",util);
 		sprintf(taskid,"%d",count);
-		// printf("starttime :%s\t cycles : %s\t utilization : %s sleep_time : %s\n",line,cpu_time,core_request,sleep_time);
+//		printf("\nexectime: %s\t starttime :%s\t cycles : %s\t utilization : %s sleep_time : %s\n",exec_time,line,cpu_time,core_request,sleep_time);
 		
 		pid = fork();
 		
@@ -131,7 +134,7 @@ int main(int argc,char *argv[])
 						
 			// printf("before exec\n");
 				
-			if(execl("./emulate_job",core_request,cpu_time,taskId,sleep_time,jobId,taskId,line,NULL)==-1)//change
+			if(execl("./emulate_job",core_request,cpu_time,taskId,sleep_time,jobId,taskId,line,exec_time,NULL)==-1)//change
 				perror("exec");
 			printf("exec failed\n");
 			exit(0);
