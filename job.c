@@ -130,9 +130,14 @@ int main(int argc, char *argv[])
 		attr.sched_policy = SCHED_DEADLINE; 
 		//attr.sched_runtime = RT * 1000 * 1000;
 		float runtime=atof(argv[1]);
-		float period=atof(argv[7]);
+		// float period=atof(argv[7])+100.0;
 		attr.sched_runtime = runtime*1000*1000;
-		attr.sched_period = attr.sched_deadline = period*1000*1000;
+		
+		// attr.sched_deadline = (period-100)*1000*1000;
+		// attr.sched_period = period*1000*1000;
+
+		attr.sched_deadline=300*1000*1000;
+		attr.sched_period=600*1000*1000;
 		int jobid=atoi(argv[4]);
 		// time_t t;
   //   	time(&t
