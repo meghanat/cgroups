@@ -66,14 +66,14 @@ int main(int argc,char *argv[])
 	//printf("%s\n",cpu_grp);
 	// system(cpu_grp);
 	
-	f = fopen("input2.4_4/starttime.txt", "r");
-	f1 = fopen("input2.4_4/cpu_time.txt", "r");
-	f2 = fopen("input2.4_4/core_request.txt","r");
-	f3 = fopen("input2.4_4/sleep_time.txt","r");
-	f4 = fopen("input2.4_4/job_id.txt","r");
-	f5 = fopen("input2.4_4/task_index.txt","r");
+	f = fopen("input1_4/starttime.txt", "r");
+	f1 = fopen("input1_4/cpu_time.txt", "r");
+	f2 = fopen("input1_4/core_request.txt","r");
+	f3 = fopen("input1_4/sleep_time.txt","r");
+	f4 = fopen("input1_4/job_id.txt","r");
+	f5 = fopen("input1_4/task_index.txt","r");
 		
-	f6 = fopen("input2.4_4/exec_time.txt","r");
+	f6 = fopen("input1_4/exec_time.txt","r");
 	printf("files opened\n");	
 	
 	int count =0;

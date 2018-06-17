@@ -109,16 +109,18 @@ void printSchedType()
  
 int main(int argc, char *argv[])
 {
-	// printf("BEFORE:%d",getpid());	
-		// printSchedType();
-	      	
+	printf("BEFORE:%d",getpid());	
+		printSchedType();
+	     int job_id;
+	     srand(time(NULL));
+	     job_id=rand();
 		/////////////////////////////////////////////////////
 		struct sched_attr attr;
 		int x = 0;
 		int ret;
 		unsigned int flags = 0;
 		int P=100;
-		float RT = atof(argv[0]);
+		// float RT = atof(argv[0]);
 		// printf("hhhhhhhhh : %f",RT);
 		//printf("deadline thread started [%ld]\n", gettid());
 
@@ -128,29 +130,36 @@ int main(int argc, char *argv[])
 		attr.sched_priority = 0;
 		/* This creates a 10ms/30ms reservation *///nano
 		attr.sched_policy = SCHED_DEADLINE; 
-		//attr.sched_runtime = RT * 1000 * 1000;
-		float runtime=atof(argv[1])*1.01;
-		float deadline=atof(argv[7])*0.9;
-		float period=deadline*1.01;
+		//attr.sched_runtime = RT * 10 cx d00 * 1000;
+		// float runtime=atof(argv[1]);
+		// float period=atof(argv[7])+100.0;
+		// attr.sched_runtime = runtime*1000*1000;
+		// float deadline;
+		// float period;
+		// period=atof(argv[2]);
+		// deadline= period*0.9;
 		
-		attr.sched_runtime = runtime*1000*1000;
-		attr.sched_period = period*1000*1000;
-		
-		attr.sched_deadline=deadline*1000*1000;
-		
-		int jobid=atoi(argv[4]);
+		// float runtime=atof(argv[1])*period;
+		// printf("values %s, %s\n",argv[1],argv[2] );
+
+		float period=atof(argv[2]);
+		float runtime=atof(argv[1])*period;
+		attr.sched_deadline =period*1000000;
+		attr.sched_period = period*1000000;
+		attr.sched_runtime=runtime*period*1000000;
+		// int jobid=atoi(argv[4]);
 		// time_t t;
   //   	time(&t
 		// (unsigned long)time(NULL)
-  		printf("\nStarting: Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
+  		printf("\nBG Job: Starting: \n");//Time:%lu, Job Id:%d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),job_id,period,runtime,runtime/period);
 
 		ret = sched_setattr(getpid(), &attr, flags);
 		// ret =0;
-		// printf("SCHED_DEADLINE RETURN: %d",ret);
+		printf("SCHED_DEADLINE RETURN: %d",ret);
 		if (ret < 0) {
 			done = 0;
 			perror("sched_setattr");
-			printf("Error!! Job ID: %d",atoi(argv[4]));
+			printf("Error!! Job ID: %d",job_id);
 			exit(-1);
 		}
 
@@ -158,8 +167,8 @@ int main(int argc, char *argv[])
 	
 	// 	printf("BEFORE:%d",getpid());	
 	// 	printSchedType();
-	// printf("AFTER:%d",getpid());	
-	// 	printSchedType();
+	printf("AFTER:%d",getpid());	
+		printSchedType();
        
 	
 	// printf("EXEC SUCCESSFULL!!!\n");
@@ -176,7 +185,7 @@ int main(int argc, char *argv[])
 
 	char a[50];
 	char util[8];
-	float utility = atof(argv[0]);
+	
 
 	//printf("%d\n", utility);
 	
@@ -185,7 +194,7 @@ int main(int argc, char *argv[])
 	//SLEEP TIME CALCULATION -  part of this code must be shifted to the ccontroller program, especially the code involving IO speed of the machine
 
 	//float ts = slice*(1-utility)/utility;
-	int id = atoi(argv[2]);
+	
 
 	float ts;
 	int buff=10;
@@ -196,10 +205,10 @@ int main(int argc, char *argv[])
 	ts = ts*1000000;
 
 	////////////////////////////////////////////////////////
-	double cpu_t = atof(argv[1]);
+	double cpu_t = 0.05*10;
 	
 	double cpuTime = cpu_t;
-	double slice_cput = cpuTime/((double)deadline/slice);
+	double slice_cput = cpuTime/((double)10/slice);
 	
 	//printf("util : %f\t cputime : %f\n",utility,cpuTime);
 	
@@ -207,9 +216,9 @@ int main(int argc, char *argv[])
 	t_start = get_wall_time();
 
 
-	double total_sleep_time = atof(argv[3])*0.99;
+	double total_sleep_time = (0.95*10)*0.9;
 	
-	double slice_sleep = total_sleep_time / ((double)deadline/slice);
+	double slice_sleep = total_sleep_time / ((double)10/slice);
 	//printf("slice_sleep = %f\n",slice_sleep);
 	//printf("utilization : %f\n",slice/(slice+slice_sleep));
 	slice_sleep *= 1000000;
@@ -244,18 +253,25 @@ int main(int argc, char *argv[])
 	
 	time_spent = end_wall - start_wall;
 	
-	sprintf(util,"%f %f\n",(float)num/(time_spent),total);
+	// sprintf(util,"%f %f\n",(float)num/(time_spent),total);
 	
 }
 //	printf("\nJob Id:%d, cpu time: %f, actual util:%s, input util:%f \n",jobid,cpuTime,util,runtime/period);
 //	printf("\n Time:%lu, Start Time: %d, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ration: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
 //	system("ps -eo stat,pid,user,command | egrep \"^STAT|^D|^R\"");
 //	printf("\n\n=====================================\n\n");
-	t_end = get_wall_time();
-	total_time_spent = t_end - t_start;
-	printf("\n Ending: Time:%lu, Start Time: %d,End Time: %f, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ratio: %f\n",(unsigned long)time(NULL), atoi(argv[6]),t_end,jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
-	FILE *op = fopen("wl_resp.txt","a");
-	fprintf(op,"%s, %d, %f\n",argv[4],id,total_time_spent);
-	fclose(op);
+	// t_end = get_wall_time();
+	// total_time_spent = t_end - t_start;
+	// printf("\n Ending: Time:%lu, Start Time: %d,End Time: %f, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ratio: %f\n",(unsigned long)time(NULL), atoi(argv[6]),t_end,jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
+	
+	printf("BG job ending: %d\n",job_id);
+	// FILE *op = fopen("wl_resp.txt","a");
+	// fprintf(op,"%s, %d, %f\n",argv[4],id,total_time_spent);
+	// fclose(op);
+	// int pid = fork();
+	// printf("fork called %d\n",pid);
+	// perror("fork");
+	
+	
 	return 0;
 }
