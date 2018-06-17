@@ -106,65 +106,49 @@ void printSchedType()
 
         }
 }
- 
-int main(int argc, char *argv[])
-{
-	// printf("BEFORE:%d",getpid());	
-		// printSchedType();
-	      	
-		/////////////////////////////////////////////////////
+
+int schedule_job(float runtime, float period, float deadline){
+	/////////////////////////////////////////////////////
 		struct sched_attr attr;
-		int x = 0;
-		int ret;
 		unsigned int flags = 0;
-		int P=100;
-		float RT = atof(argv[0]);
-		// printf("hhhhhhhhh : %f",RT);
-		//printf("deadline thread started [%ld]\n", gettid());
 
 		attr.size = sizeof(attr);
 		attr.sched_flags = 0;
 		attr.sched_nice = 0;
 		attr.sched_priority = 0;
-		/* This creates a 10ms/30ms reservation *///nano
-		attr.sched_policy = SCHED_DEADLINE; 
-		//attr.sched_runtime = RT * 1000 * 1000;
-		float runtime=atof(argv[1])*1.01;
-		float deadline=atof(argv[7])*0.9;
-		float period=deadline*1.01;
 		
+		attr.sched_policy = SCHED_DEADLINE;
 		attr.sched_runtime = runtime*1000*1000;
 		attr.sched_period = period*1000*1000;
-		
-		attr.sched_deadline=deadline*1000*1000;
-		
-		int jobid=atoi(argv[4]);
-		// time_t t;
-  //   	time(&t
-		// (unsigned long)time(NULL)
-  		printf("\nStarting: Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
+		attr.sched_deadline=deadline*1000*1000;		
+		return sched_setattr(getpid(), &attr, flags);
 
-		ret = sched_setattr(getpid(), &attr, flags);
-		// ret =0;
-		// printf("SCHED_DEADLINE RETURN: %d",ret);
-		if (ret < 0) {
-			done = 0;
+
+
+}
+ 
+int main(int argc, char *argv[])
+{
+	
+		
+	float runtime=atof(argv[1]);
+	float deadline=atof(argv[7]);
+	float period=deadline;
+	int ret;
+	int jobid=atoi(argv[4]);
+	
+	do{
+		usleep(1000000);
+		ret=schedule_job(runtime,period,deadline);
+		if(ret<0){
 			perror("sched_setattr");
-			printf("Error!! Job ID: %d",atoi(argv[4]));
-			exit(-1);
+			printf("Error: Job Id: %d\n",jobid );
 		}
 
+	}
+	while(ret<0);
+	printf("\nStarting: Time:%lu, Start Time: %d, Job Id: %d, Period: %f, Runtime: %f, Ratio: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period);
 
-	
-	// 	printf("BEFORE:%d",getpid());	
-	// 	printSchedType();
-	// printf("AFTER:%d",getpid());	
-	// 	printSchedType();
-       
-	
-	// printf("EXEC SUCCESSFULL!!!\n");
-	
-	
 	int i;
 	clock_t start, end;
 
@@ -207,7 +191,7 @@ int main(int argc, char *argv[])
 	t_start = get_wall_time();
 
 
-	double total_sleep_time = atof(argv[3])*0.99;
+	double total_sleep_time = atof(argv[3]);
 	
 	double slice_sleep = total_sleep_time / ((double)deadline/slice);
 	//printf("slice_sleep = %f\n",slice_sleep);
@@ -217,40 +201,39 @@ int main(int argc, char *argv[])
 	// printf("%s\n",argv[4] );
 	while(1)
 	{
-	start_wall = get_wall_time();
-	start = clock();
-	for(j=0;j<10000000;)
-	{
-		num = 12/1822*4386384348/579849;
-		num = 12/1822*4386384348/579849;
-		num = 12/1822*4386384348/579849;
-			
-	
-	end = clock();
-	num = end-start;
-	num = num/CLOCKS_PER_SEC;
-	if(num>=slice_cput)
-		break;
-	}
-	total += num;
+		start_wall = get_wall_time();
+		start = clock();
+		for(j=0;j<10000000;)
+		{
+			num = 12/1822*4386384348/579849;
+			num = 12/1822*4386384348/579849;
+			num = 12/1822*4386384348/579849;
+				
 		
-	
-	if(total>=cpuTime)
-		break;
-	usleep(slice_sleep);
-	end_wall = get_wall_time();
-	num = end-start;
-	num = num/CLOCKS_PER_SEC;
-	
-	time_spent = end_wall - start_wall;
-	
-	sprintf(util,"%f %f\n",(float)num/(time_spent),total);
-	
-}
+			end = clock();
+			num = end-start;
+			num = num/CLOCKS_PER_SEC;
+			if(num>=slice_cput)
+				break;
+		}
+		total += num;
+			
+		
+		if(total>=cpuTime)
+			break;
+		usleep(slice_sleep);
+		end_wall = get_wall_time();
+		num = end-start;
+		num = num/CLOCKS_PER_SEC;
+		
+		time_spent = end_wall - start_wall;
+		
+		sprintf(util,"%f %f\n",(float)num/(time_spent),total);
+		
+	}
 //	printf("\nJob Id:%d, cpu time: %f, actual util:%s, input util:%f \n",jobid,cpuTime,util,runtime/period);
-//	printf("\n Time:%lu, Start Time: %d, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ration: %f\n",(unsigned long)time(NULL),atoi(argv[6]),jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
 //	system("ps -eo stat,pid,user,command | egrep \"^STAT|^D|^R\"");
-//	printf("\n\n=====================================\n\n");
+
 	t_end = get_wall_time();
 	total_time_spent = t_end - t_start;
 	printf("\n Ending: Time:%lu, Start Time: %d,End Time: %f, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ratio: %f\n",(unsigned long)time(NULL), atoi(argv[6]),t_end,jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
