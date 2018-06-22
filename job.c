@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
 		
 	float runtime=atof(argv[1]);
 	float deadline=atof(argv[7]);
-	float period=deadline;
+	float period=deadline*4/3;
 	int ret;
 	int jobid=atoi(argv[4]);
 	
