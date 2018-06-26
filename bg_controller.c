@@ -36,7 +36,7 @@ int main(int argc,char *argv[])
 		if(pid==0)
 		{
 						
-			printf("before exec %s\n",argv[1]);
+			// printf("child\n");
 				
 			if(execl("./bg_job",argv[1],argv[2],NULL)==-1)//change
 				perror("exec");
@@ -46,7 +46,8 @@ int main(int argc,char *argv[])
 		}
 		else
 		{
-			wait(NULL);
+			// printf("parent\n" );
+			wait();
 			
 		}
 	

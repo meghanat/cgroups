@@ -133,7 +133,7 @@ int main(int argc, char *argv[])
 		
 	float runtime=atof(argv[1]);
 	float deadline=atof(argv[7]);
-	float period=deadline;
+	float period=deadline*4/3;
 	int ret;
 	int jobid=atoi(argv[4]);
 	
@@ -180,7 +180,7 @@ int main(int argc, char *argv[])
 	ts = ts*1000000;
 
 	////////////////////////////////////////////////////////
-	double cpu_t = atof(argv[1]);
+	double cpu_t = runtime;
 	
 	double cpuTime = cpu_t;
 	double slice_cput = cpuTime/((double)deadline/slice);
@@ -238,7 +238,7 @@ int main(int argc, char *argv[])
 	total_time_spent = t_end - t_start;
 	printf("\n Ending: Time:%lu, Start Time: %d,End Time: %f, Job Id: %d, Input Period: %f, Input Runtime: %f, Input Ratio: %f, Actual Runtime: %f, Actual Period: %f, Actual Ratio: %f\n",(unsigned long)time(NULL), atoi(argv[6]),t_end,jobid,period,runtime,runtime/period,total,total_time_spent, total/total_time_spent);
 	FILE *op = fopen("wl_resp.txt","a");
-	fprintf(op,"%s, %d, %f\n",argv[4],id,total_time_spent);
+	fprintf(op,"%d, %d, %f\n",jobid,id,total_time_spent);
 	fclose(op);
 	return 0;
 }

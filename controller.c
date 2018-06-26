@@ -17,7 +17,7 @@
 #include <linux/types.h>
 #include <sys/syscall.h>
 #include <pthread.h>
-
+#include <errno.h>
  
 int main(int argc,char *argv[])
 {
@@ -77,7 +77,7 @@ int main(int argc,char *argv[])
 	printf("files opened\n");	
 	
 	int count =0;
-	while(count<350)
+	while(count<5)
 	{
 		if(!flag)
 		{
@@ -146,11 +146,43 @@ int main(int argc,char *argv[])
 		}
 		prev = start_time;
 	}
+
+	int status;
+	int count_lines=0;
+
+	while(1){
+
+		status=wait(-1);
+		if(status ==-1 && errno==ECHILD){
+			break;
+		}
+
+	}
+	
+	// while(1){
+
+	// 	FILE *fileptr = fopen("wl_resp.txt", "r");
+ //   		//extract character from file and store in chr
+ //    	char chr = getc(fileptr);
+ //    	while (chr != EOF)
+ //    	{
+ //        	//Count whenever new line is encountered
+ //        	if (chr == '\n')
+ //        	{
+ //            	count_lines = count_lines + 1;
+ //        	}
+ //        	//take next character from file.
+ //        	chr = getc(fileptr);
+ //    	}
+	// }
+	
+	printf("\n=======Run completed============\n");
 	fclose(f);
 	fclose(f1);
 	fclose(f2);
 	fclose(f3);
 	fclose(f4);
 	fclose(f5);
+	fclose(f6);
 	return 0;
 }
