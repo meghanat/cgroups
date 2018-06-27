@@ -77,7 +77,7 @@ int main(int argc,char *argv[])
 	printf("files opened\n");	
 	
 	int count =0;
-	while(count<5)
+	while(count<350)
 	{
 		if(!flag)
 		{
